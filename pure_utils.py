@@ -8,7 +8,7 @@ class pure:
         self.f = f
 
     def __get__(self, ins, cls):
-        if ins:
+        if not ins:
             return self.f
         sig = inspect.signature(self.f)
         param_names = list(sig.parameters)
