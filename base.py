@@ -2,6 +2,8 @@
 import asyncio
 import typing
 
+from asyncio_utils import Wait
+
 class TaskDef(typing.NamedTuple):
     component: type
 

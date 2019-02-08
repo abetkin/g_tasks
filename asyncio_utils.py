@@ -6,7 +6,7 @@ class Wait:
     Returns results or exceptions as soon as they are ready.
     '''
 
-    def __init__(self, awaitables):
+    def __init__(self, *awaitables):
         loop = asyncio.events.get_event_loop()
         self.results = [
             loop.create_future()
