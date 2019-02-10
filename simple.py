@@ -3,32 +3,46 @@
 import asyncio
 import contextvars
 
+
+# future
+
 class Contex:
     tasks = contextvars.ContextVar('tasks', default={})
-
-    def __rshift__(self, coro):
-        tasks = self.tasks.get()
-        if coro in tasks:
-            return tasks[coro]
-        task = asyncio.create_task(coro())
-        tasks[coro] = task
-        return asyncio.shield(task)
 
     def __setitem__(self, key, value):
         tasks = self.tasks.get()
         tasks[key] = value
-        self.tasks.set(tasks)
+        # self.tasks.set(tasks)
+
+    def future(self, key):
+        1
+
+    def __getitem__(self, key):
+        tasks = self.tasks.get()
+        return tasks[key]
+
 
 g = Contex()
 
 
+from asyncio import events
 
-import pytest
+def _():
+    loop = events.get_event_loop()
+    loop.create_future()
 
-@pytest.mark.asyncio
-async def test_1():
-    set_context({
-        Name: "John"
-    })
-    v = await Greeting.eval()
-    print(v)
+
+class once:
+
+    def __init__(self, co):
+        self.co = co
+
+    def __call__(self, *args, **kwargs):
+        tasks = g.tasks.get()
+        if self.co in tasks:
+            return tasks[self.co]
+        task = asyncio.create_task(self.co())
+        tasks[self.co] = task
+        return asyncio.shield(task)
+
+

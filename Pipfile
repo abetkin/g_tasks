@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 pytest = "*"
 pytest-asyncio = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.7"

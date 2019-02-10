@@ -1,5 +1,5 @@
 
-from simple import g
+from simple import g, once
 from asyncio_utils import Wait
 
 import asyncio
@@ -24,18 +24,15 @@ async def d():
 @once
 async def e():
     await asyncio.sleep(1)
-    r =  (g >> Request)
+    r =  g[Request]
     return r['params']
 
 
 async def a():
     await asyncio.sleep(1)
-    async for _ in Wait(
-            g >> b,
-            g >>c,
-            g >> d):
+    async for _ in Wait(b(), c(), d()):
         pass
-    return (await g >> e)
+    return (await e())
 
 
 from util import Request
