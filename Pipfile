@@ -4,11 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-
-[packages]
 pytest = "*"
 pytest-asyncio = "*"
 ipython = "*"
+
+[packages]
 
 [requires]
 python_version = "3.7"

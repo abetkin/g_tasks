@@ -1,5 +1,5 @@
 
-from simple import g, once
+from g_tasks import g, once
 from asyncio_utils import Wait
 
 import asyncio
@@ -9,6 +9,7 @@ import pytest
 @once
 async def b():
     await asyncio.sleep(1)
+    g.tasks['message'] = 'how are you?'
     return 1
 
 @once
@@ -24,8 +25,8 @@ async def d():
 @once
 async def e():
     await asyncio.sleep(1)
-    r =  g[Request]
-    return r['params']
+    msg = await g.tasks['message']
+    return f"{g.request['params']['greeting']} {msg}"
 
 
 async def a():
@@ -35,12 +36,11 @@ async def a():
     return (await e())
 
 
-from util import Request
 
 @pytest.mark.asyncio
 async def test_1():
-    # TODO once decorator
-    g[Request] = {'params': {'hey': '!'}}
+    request = {'params': {'greeting': 'Bo!'}}
+    g.set_attr('request', request)
     import time
     start = time.time()
     v = await a()

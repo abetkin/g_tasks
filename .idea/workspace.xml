@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c3e02-97ea-4310-be34-f8d71bcdd74e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/simple.py" beforeDir="false" afterPath="$PROJECT_DIR$/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gcontext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_m.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,13 +18,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="187">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
-                <element signature="e#1#22#0" expanded="true" />
+                <element signature="e#1#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/simple.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gcontext.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="816">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#2#16#0" expanded="true" />
               </folding>
@@ -46,10 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib64/python3.7/asyncio/tasks.py">
+        <entry file="file:///usr/lib64/python3.7/typing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="384" column="8" lean-forward="true" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="38" />
+            <state relative-caret-position="241">
+              <caret line="1201" selection-start-line="1201" selection-end-line="1201" />
             </state>
           </provider>
         </entry>
@@ -74,7 +80,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pipfile">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -92,10 +102,15 @@
       <find>cls</find>
       <find>_run</find>
       <find>get_flattened_deps</find>
+      <find>Contex</find>
+      <find>UserDict</find>
+      <find>shield</find>
+      <find>events</find>
     </findStrings>
     <replaceStrings>
       <replace>self</replace>
       <replace>_traverse_deps</replace>
+      <replace>Context</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -119,17 +134,19 @@
         <option value="$PROJECT_DIR$/aerror.py" />
         <option value="$PROJECT_DIR$/util.py" />
         <option value="$PROJECT_DIR$/asyncio_utils.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/try_con.py" />
+        <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/simple.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="44" />
-    <option name="y" value="30" />
-    <option name="width" value="1322" />
-    <option name="height" value="738" />
+    <option name="x" value="51" />
+    <option name="y" value="-4" />
+    <option name="width" value="2509" />
+    <option name="height" value="1444" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -151,7 +168,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/lib64/python3.7/asyncio/tasks.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.local/share/virtualenvs/components-41Bd57vI/lib/python3.7/collections/__init__.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -180,10 +197,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="-4" width="1322" height="772" extended-state="6" />
-    <editor active="true" />
+    <frame x="51" y="-4" width="2509" height="1444" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13679245" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.07116714" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -193,54 +209,36 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4183835" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41826555" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Cargo" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.249695" />
-      <window_info active="true" anchor="right" id="Structure" order="4" side_tool="true" visible="true" weight="0.20990565" />
+      <window_info anchor="right" id="Structure" order="4" side_tool="true" visible="true" weight="0.14680764" />
     </layout>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/m.py" />
-    <entry file="file://$PROJECT_DIR$/_m.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec.py" />
     <entry file="file://$PROJECT_DIR$/aerror.py" />
     <entry file="file://$PROJECT_DIR$/test_flatten.py" />
     <entry file="file://$PROJECT_DIR$/pure_utils.py" />
-    <entry file="file://$PROJECT_DIR$/asyncio_utils.py">
+    <entry file="file://$PROJECT_DIR$/depth_first.py" />
+    <entry file="file://$PROJECT_DIR$/base.py" />
+    <entry file="file:///usr/lib64/python3.7/asyncio/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="428">
+          <caret line="384" column="8" lean-forward="true" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="38" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cls.py" />
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/depth_first.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -251,42 +249,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/components-41Bd57vI/lib/python3.7/abc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#1#22#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="167" column="16" lean-forward="true" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="222">
+          <caret line="223" column="8" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/components-41Bd57vI/lib/python3.7/collections/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/try_con.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="19" />
           <folding>
             <element signature="e#1#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib64/python3.7/asyncio/tasks.py">
+    <entry file="file:///usr/lib64/python3.7/typing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="384" column="8" lean-forward="true" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="38" />
+        <state relative-caret-position="241">
+          <caret line="1201" selection-start-line="1201" selection-end-line="1201" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple.py">
+    <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="170">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_m.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asyncio_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gcontext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#2#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
