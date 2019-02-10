@@ -7,6 +7,7 @@ import contextvars
 # future
 
 class Contex:
+    values = contextvars.ContextVar('values', default={})
     tasks = contextvars.ContextVar('tasks', default={})
 
     def __setitem__(self, key, value):
@@ -16,7 +17,10 @@ class Contex:
         tasks[key] = value
         # self.tasks.set(tasks)
 
-    def future(self, key):
+    def get_future(self, key):
+        1
+
+    def set_future(self, key):
         1
 
     def __getitem__(self, key):
