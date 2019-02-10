@@ -1,28 +1,28 @@
 
-from g_tasks import g, once
+from g_tasks import g, Task
 from asyncio_utils import Wait
 
 import asyncio
 
 import pytest
 
-@once
+@Task
 async def b():
     await asyncio.sleep(1)
     g.tasks['message'] = 'how are you?'
     return 1
 
-@once
+@Task
 async def c():
     await asyncio.sleep(1)
     return 1
 
-@once
+@Task
 async def d():
     await asyncio.sleep(1)
     return 1
 
-@once
+@Task
 async def e():
     await asyncio.sleep(1)
     msg = await g.tasks['message']
@@ -31,7 +31,7 @@ async def e():
 
 async def a():
     await asyncio.sleep(1)
-    async for _ in Wait(b(), c(), d()):
+    async for _ in Wait(b.task, c.task, d.task):
         pass
     return (await e())
 

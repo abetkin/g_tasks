@@ -22,10 +22,10 @@ class Tasks:
         tasks = self._tasks.get()
         if key in tasks:
             task = tasks[key]
-            return asyncio.shield(task) # ?
+            return task
+            # return asyncio.shield(task) # ?
         loop = asyncio.events.get_event_loop()
         tasks[key] = loop.create_future()
-        print(f'{key}: created')
         return tasks[key]
 
 
@@ -45,17 +45,27 @@ class Context:
 g = Context()
 
 
-class once:
+class Task:
+
+
+    @property
+    def task(self):
+        tasks = Tasks._tasks.get()
+        if self.co not in tasks:
+            loop = asyncio.events.get_event_loop()
+            tasks[self.co] = loop.create_future()
+        return tasks[self.co]
 
     def __init__(self, co):
         self.co = co
 
     def __call__(self, *args, **kwargs):
         tasks = g.tasks._tasks.get()
-        if self.co in tasks:
-            return tasks[self.co]
         task = asyncio.create_task(self.co())
-        tasks[self.co] = task
-        return asyncio.shield(task)
-
-
+        task = asyncio.shield(task)
+        if self.co not in tasks:
+            tasks[self.co] = task
+            return task
+        fut = tasks[self.co] #  a future
+        task.add_done_callback(lambda r: fut.set_result(r))
+        return fut
