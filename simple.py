@@ -11,6 +11,8 @@ class Contex:
 
     def __setitem__(self, key, value):
         tasks = self.tasks.get()
+        # if tasks[key] is a future
+        #     ...
         tasks[key] = value
         # self.tasks.set(tasks)
 
