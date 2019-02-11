@@ -8,13 +8,19 @@ class Wait:
 
     def __init__(self, *awaitables):
         loop = asyncio.events.get_event_loop()
+        awaitables = [
+            asyncio.tasks.ensure_future(aw) for aw in awaitables
+        ]
         self.results = [
             loop.create_future()
             for _ in awaitables
         ]
 
-        def on_done(f, results=self.results[:]):
-            results.pop().set_result(f)
+        def on_done(fut, results=self.results[:]):
+            if fut.cancelled():
+                r = asyncio.CancelledError()
+            r = fut.exception() or fut.result()
+            results.pop().set_result(r)
 
         for task in awaitables:
             task.add_done_callback(on_done)
@@ -25,8 +31,6 @@ class Wait:
     async def __anext__(self):
         while self.results:
             fut = self.results.pop()
-            fut = await fut
-            if fut.cancelled():
-                return asyncio.CancelledError()
-            return fut.exception() or fut.result()
+            r = await fut
+            return r.result()
         raise StopAsyncIteration

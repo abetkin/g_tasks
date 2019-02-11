@@ -10,20 +10,11 @@ class Tasks:
     def __contains__(self, item):
         return item in self._tasks.get()
 
-    def __setitem__(self, key, value):
-        tasks = self._tasks.get()
-        if key not in tasks:
-            loop = asyncio.events.get_event_loop()
-            tasks[key] = loop.create_future()
-        fut = tasks[key]
-        fut.set_result(value)
-
     def __getitem__(self, key):
         tasks = self._tasks.get()
         if key in tasks:
             task = tasks[key]
             return task
-            # return asyncio.shield(task) # ?
         loop = asyncio.events.get_event_loop()
         tasks[key] = loop.create_future()
         return tasks[key]
@@ -41,16 +32,22 @@ class Context:
         values = self._values.get()
         values[key] = value
 
+    def init(self):
+        self._values.set({})
+        self.tasks._tasks.set({})
+
 
 g = Context()
 
 
-class Task:
+class task:
 
+    def __await__(self):
+        return self.task
 
     @property
     def task(self):
-        tasks = Tasks._tasks.get()
+        tasks = g.tasks._tasks.get()
         if self.co not in tasks:
             loop = asyncio.events.get_event_loop()
             tasks[self.co] = loop.create_future()
@@ -62,10 +59,9 @@ class Task:
     def __call__(self, *args, **kwargs):
         tasks = g.tasks._tasks.get()
         task = asyncio.create_task(self.co())
-        task = asyncio.shield(task)
         if self.co not in tasks:
             tasks[self.co] = task
-            return task
+            return asyncio.shield(task)
         fut = tasks[self.co] #  a future
         task.add_done_callback(lambda r: fut.set_result(r))
         return fut
